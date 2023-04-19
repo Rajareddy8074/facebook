@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'poppins', 'sans-serifa';
+}
+body{
+    background-color:#efefef;
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#1876f2;
+    padding:5px 5%;
+    position:sticky;
+    top:0;
+    z-index:100 ;
+    
+}
+.logo{
+    width:160px;
+    margin-right:45px;
+}
+.nav-left,.nav-right{
+    display:flex;
+    align-items:center; 
+}
+.nav-left ul li{
+    list-style:none;
+    display:inline-block;
+}
+.nav-left ul li img{
+    width:28px;
+    margin:0 15; 
+}
+.nav-user-icon img{
+    width:40px;
+    border-radius:50%;
+    cursor:pointer;
+
+}
+.left-sidebar{
+    float:left;
+    position:sticky;
+    top:70px;
+    align-self: flex-start;
+    background-color: #fff;
+    padding:20px;
+    border-radius:4px;
+    color:#626262;
+    height:100vh;
+}
+.right-sidebar{
+    background:#cbdffa;
+   margin-left: 850px;
+    height:150px;
+    width:250px;
+}
+.imp-links a{
+    text-decoration:null;
+    display:flex;
+    align-items:center;
+    width:fit-content;
+
+}
+.img-links img a{
+    width:25px;
+    margin-right:15px;
+}
+.img-links  a:last-child{
+    color:#1876f2;
+}
+.sidebar-title{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+.sidebar-title h4{
+    font-weight:600;
+    font-size:16px;
+}
+.sidebar-title a{
+    text-decoration:none;
+    color:#1876f2;
+    font-size:12;
+    
+}
+.like-dislike {
+    display: flex;
+    align-items: center;
+    margin-left:10px;
+    
+  }
+  
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 3spx;
+    
+  }
+  
+  button img {
+    width: 32px;
+    height: 32px;
+  }
+  

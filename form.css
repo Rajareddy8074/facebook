@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+  }
+  
+  .form-table td {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .form-table label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-table input[type="text"],
+  .form-table input[type="password"],
+  .form-table input[type="email"],
+  .form-table input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .form-table input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .form-table input[type="submit"] {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .form-table input[type="submit"]:hover {
+    background-color: #2a4c85;
+  }
+  
+  .form-table .error {
+    color: #ff0000;
+    font-weight: bold;
+  }
+  

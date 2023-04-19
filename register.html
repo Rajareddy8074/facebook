@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width,inital-scale=1.0" />
+<link rel="stylesheet" href="form.css" />
+<title> Browser </title>
+<style>
+table {
+  margin: 0 auto;
+}
+.error {
+  color: red;
+}
+</style>
+<script>
+function validateForm() {
+  var password = document.forms["f"]["pwd"].value;
+  var confirmPassword = document.forms["f"]["cpwd"].value;
+  if (password != confirmPassword) {
+    document.getElementById("error").innerHTML = "Passwords do not match!";
+    return false;
+  }
+var dob = document.forms["f"]["DOB"].value;
+var dobDate = new Date(dob);
+var currentDate = new Date();
+var age = currentDate.getFullYear() - dobDate.getFullYear();
+if (age < 18) {
+document.getElementById("error").innerHTML = "You must be 18 years or older to register!";
+return false;
+}
+
+var username = document.forms["f"]["username"].value;
+if (username === "exampleusername") {
+document.getElementById("error").innerHTML = "Please choose a different username!";
+return false;
+}
+}
+</script>
+
+</head>
+<body>
+<div class="me" >
+    <form name="f" action="register.php" method="post" onsubmit="return validateForm()">
+    <h2 align="center">FB SIGNUP FORM</h2>
+    <table border="0" cellspacing="20" cellpadding="5" align="center">
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td> <input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td><label for="username">Username:</label></td>
+            <td> <input type="text" name="username" required></td>
+        </tr>
+        <tr>
+            <td> <label for="email">Email:</label></td>
+            <td> <input type="text" name="email" required></td>
+        </tr>
+        <tr>
+            <td> <label for="gender" > Gender:<label></td>
+            <td> <input type="radio" name="gender" value="Male">Male</td>
+            <td> <input type="radio" name="gender" value="Female">Female</td>
+        </tr>
+        <tr>
+            <td><label for="DOB">DOB:<label></td>
+            <td><input type="date" name="DOB" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password:</label></td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr>
+            <td><label for="confirmpassword">Confirm Password:</label></td>
+            <td><input type="password" name="cpwd"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" name="submit" value="Register"></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><span class="error" id="error"></span></td>
+        </tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>
+
+
+

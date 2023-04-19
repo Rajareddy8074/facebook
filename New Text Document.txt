@@ -1,0 +1,17 @@
+<?php
+    $conn = mysqli_connect("localhost","root","","raja");
+
+    $un = $_POST['username'];
+    $pw = $_POST['password'];
+
+
+    if($conn){
+        $query = "select username from details where username='$un' and password='$pw'";
+    while($row=mysql_fetch_assoc($result_can)){
+        echo "Login successful";
+        exit();
+
+    }
+    echo "User doesnot exists";
+}
+?>
